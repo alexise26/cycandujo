@@ -1,0 +1,358 @@
+<!-- SLIDER -->
+<section id="slider">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('./assets/img/car-1.jpg')">
+        <div class="carousel-caption">
+          <h3>Consultoría empresarial</h3>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('./assets/img/car-2.jpg')">
+        <div class="carousel-caption ">
+          <h3>Mercadotecnia</h3>
+          <p class="d-none d-sm-block">Estudios de mercado - Imagen corporativa - Redes sociales - Campañas</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('./assets/img/car-3.jpg')">
+        <div class="carousel-caption ">
+          <h3>Recursos humanos</h3>
+          <p class="d-none d-sm-block">Reclutamiento - Selección - Capacitación - Clima organizacional - Desarrollo de personal</p>
+        </div>
+      </div>
+      <!-- Slide Four - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('./assets/img/car-4.png')">
+        <div class="carousel-caption ">
+          <h3>Capacitación y Consultoría</h3>
+          <p class="d-none d-sm-block">A PyMEs y emprendedores. Contamos con sala de capacitación para nuestros propios y cursos y para renta del espacio.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about" class="text-center pt-5 pb-5">
+    <div class="container">
+      <div class="row text-center">
+        <nav class="nav nav-pills nav-justified" style="width:100%;">
+          <a class="nav-item nav-link pointer" (click)="aboutShow(1)" [ngClass]="{ 'active': aboutActive == 1}"><small>Acerca</small></a>
+          <a class="nav-item nav-link pointer" (click)="aboutShow(2)" [ngClass]="{ 'active': aboutActive == 2}"><small>Misión</small></a>
+          <a class="nav-item nav-link pointer" (click)="aboutShow(3)" [ngClass]="{ 'active': aboutActive == 3}"><small>Visión</small></a>
+          <a class="nav-item nav-link pointer" (click)="aboutShow(4)" [ngClass]="{ 'active': aboutActive == 4}"><small>Valores</small></a>
+        </nav>
+      </div>
+      <h2 class="titles mt-3">{{aboutTitle}}</h2>
+      <img src="./assets/img/short.png" alt="">
+      <div class="row text-justify">
+        <p class="ml-2 mr-2" [innerHTML]="aboutP"><p>
+      </div>
+    </div>
+</section>
+<!-- SERVICES -->
+<div class="parallax-services">
+    <section id="services" class="text-center pt-5 pb-5">
+      <div class="container">
+        <h2 class="titles white mt-4">Servicios</h2>
+        <img src="./assets/img/short.png" alt="">
+        <div class="row mt-3">
+          <div class="col-xs-12 col-md-3 text-center mt-3">
+            <span class="fa-stack fa-lg">
+    				  <i class="fa fa-circle fa-stack-2x"></i>
+    				  <i class="fa fa-line-chart fa-stack-1x"></i>
+    				</span>
+            <h4 class="white mb-3 mt-3">Mercadotecnia</h4>
+            <button class="btn btn-outline-light" data-toggle="modal" data-target="#mercadotecnia">Más</button>
+          </div>
+          <div class="col-xs-12 col-md-3 text-center mt-3">
+            <span class="fa-stack fa-lg">
+						  <i class="fa fa-circle fa-stack-2x"></i>
+						  <i class="fa fa-users fa-stack-1x"></i>
+						</span>
+            <h4 class="white mb-3 mt-3">Capital Humano</h4>
+            <button class="btn btn-outline-light" data-toggle="modal" data-target="#capital">Más</button>
+          </div>
+          <div class="col-xs-12 col-md-3 text-center mt-3">
+              <span class="fa-stack fa-lg">
+							  <i class="fa fa-circle fa-stack-2x"></i>
+							  <i class="fa fa-mortar-board   fa-stack-1x"></i>
+							</span>
+              <h4 class="white mb-3 mt-3">Capacitación</h4>
+              <button class="btn btn-outline-light" data-toggle="modal" data-target="#capacitacion">Más</button>
+          </div>
+          <div class="col-xs-12 col-md-3 text-center mt-3">
+              <span class="fa-stack fa-lg">
+							  <i class="fa fa-circle fa-stack-2x"></i>
+							  <i class="fa fa-cogs fa-stack-1x"></i>
+							</span>
+              <h4 class="white mb-3 mt-3">Otros servicios</h4>
+              <button class="btn btn-outline-light" data-toggle="modal" data-target="#otros">Más</button>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+<!-- BLOG -->
+<section id="blog" class="text-center pt-5 pb-5">
+  <div class="container">
+    <h2 class="titles">Nuestro blog</h2>
+    <img src="./assets/img/short.png" alt="">
+    <div class="row">
+      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
+      <div class="col-xs-12 col-md-4 text-center">
+        <div class="grid">
+          <figure class="effect-oscar">
+            <img src="./assets/img/blog/post2.png" alt="img09"/>
+            <figcaption>
+              <h4>Facebook ADS y Marketing digital</h4>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="text-justify text-18">
+          En el mes de agosto llevamos a cabo el curso presencial “Facebook ADS y Marketing digital”
+          dirigido a emprendedores y PyMES de la ciudad de Chihuahua.
+        </p>
+      </div>
+      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
+      <div class="col-xs-12 col-md-4 text-center">
+        <div class="grid">
+          <figure class="effect-oscar">
+            <img src="./assets/img/blog/post1.png" alt="img09"/>
+            <figcaption>
+              <h4>Facebook y contenido audiovisual</h4>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="text-justify text-18">
+        El sábado 9 de septiembre estuvimos con las candidatas a Doctoras en Ciencias de la Salud y Medio Ambiente,
+        compartiendo el curso “Buenas prácticas de Facebook y contenido audiovisual”.
+        </p>
+      </div>
+      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
+      <div class="col-xs-12 col-md-4 text-center">
+        <div class="grid">
+          <figure class="effect-oscar">
+            <img src="./assets/img/blog/post3.png" alt="img09"/>
+            <figcaption>
+              <h4>Photoshop & <br> Illustrator</h4>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="text-justify text-18">
+          Estamos próximos a iniciar el curso básico de “Photoshop & Illustrator”, donde
+          iniciaremos desde las bases, para quienes nunca han manejado estos programas.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<div class="parallax-contact">
+	<section id="contact"  class="text-center pt-5 pb-5">
+		<div class="container">
+        <h2 class="titles white mt-4">Contáctanos</h2>
+        <img src="./assets/img/short.png" class="mb-3" alt="">
+			  <div class="row">
+					<div class="col-xs-12 col-sm-8" >
+							<form class="inline" id="frmContacto" name="frmContacto" method="post" action="sendbymail.php">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input type="text" name="nombre" class="form-control custom-labels" id="nombre" placeholder="Nombre" required />
+										</div>
+									</div>
+									<div class="col-sm-6 ">
+										<div class="form-group">
+											<input type="email" name="email" class="form-control custom-labels" id="email" placeholder="Correo Electrónico" required />
+										</div>
+									</div>
+									<div class="col-sm-12 ">
+										<div class="form-group">
+											<textarea rows="4" cols="80" name="message" class="form-control custom-labels" id="message" placeholder="Deja tu mensaje" required ></textarea>
+										</div>
+									</div>
+								</div>
+                <input type="submit" class="btn btn-outline-info btn-block pointer"  id="submit" value="ENVIAR"/>
+							</form>
+					</div>
+					<div class="col-xs-12 col-sm-4 mt-3 mt-sm-1">
+						<div class="col-xs-12 center">
+							<div class="form-group white">
+								<i class="fa fa-2x fa-map-marker"></i><br>
+								<span class="text">Avenida Américas 303 altos</span>
+							</div>
+						</div>
+						<div class="col-xs-12 center">
+							<div class="form-group">
+								<i class="fa fa-2x fa-phone white"></i><br>
+								<a class="text white" href="callto:6141929470">614 192 9470</a>
+							 </div>
+						</div>
+						<div class="col-xs-12 center">
+							<div class="form-group white">
+								<i class="fa fa-2x fa-envelope"></i>
+								<span class="text"><a href="malito:mail@demolink.org" class="white"><br>contacto@cycandujo.com</a></span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- MAP -->
+<section id="map" class="text-center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d875.255531174776!2d-106.1010023451168!3d28.65905619708818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea431a417474b5%3A0x4b036cce220403ed!2sAv.+de+las+Am%C3%A9ricas+303%2C+Las+Granjas%2C+31100+Chihuahua%2C+Chih.!5e0!3m2!1ses-419!2smx!4v1502130614079"
+    style="width:100%;" height="400" frameborder="0" allowfullscreen></iframe>
+</section>
+<!-- SOCIAL -->
+<section id="social" class="text-center pt-5 pb-5">
+  <div class="container">
+		<div class="text-center height-contact-element">
+			<h2 class="titles mt-4 mb-4">Síguenos</h2>
+		</div>
+		<img class="img-responsive displayed" src="assets/img/short.png" alt="short" />
+		<div class="social-box d-flex justify-content-around">
+				<div class="social-circle"><a target="_blank" href="https://www.facebook.com/CyCAndujo/"><i class="fa fa-facebook social-icons"></i></a></div>
+				<div class="social-circle"><a target="_blank" href="https://twitter.com/CyCAndujo"><i class="fa fa-twitter social-icons"></i></a></div>
+				<div class="social-circle"><a target="_blank" href="https://www.instagram.com/cycandujo/"><i class="fa fa-instagram social-icons"></i></a></div>
+				<div class="social-circle"><a target="_blank" href="https://www.linkedin.com/company/25030333/"><i class="fa fa-linkedin social-icons"></i></a></div>
+				<div class="social-circle"><a target="_blank" href="https://api.whatsapp.com/send?phone=5216141929470&text=Hola%2C%20me%20gustaría%20recibir%20más%20información%20acerca%20de%20los%20servicios%20de%20CyC%20Andujo"><i class="fa fa-whatsapp social-icons" aria-hidden="true"></i></a></div>
+		</div>
+	</div>
+</section>
+<!-- MODALS -->
+<section id="modals" >
+<!-- Mercadotecnia -->
+<div class="col-xs-12 modal fade modal-cyc" id="mercadotecnia"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document"  >
+    <div class="row">
+      <div class="text-justify" style="width:100% ;">
+        <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
+        <br><br>
+        <div class="row ml-4 mr-4" >
+          <div id="merca-acordeon" data-children=".item">
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#merca-acordeon" href="#merca-estudio" aria-expanded="true" aria-controls="exampleAccordion1">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Estudio de Mercado
+              </a>
+              <div id="merca-estudio" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Viabilidad del negocio</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Alcance (oferta vs demanda actual y su tendencia).</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Perfil de tus clientes y necesidades reales del mercado.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Competencia directa e indirecta.</p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#merca-acordeon" href="#merca-imagen" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Imagen corporativa
+              </a>
+              <div id="merca-imagen" class="collapse" role="tabpanel">
+                  <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Diseño o actualización de Logo, slogan, documentos básicos.</p>
+									<p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Material audiovisual: flyers, catálogos, brochures, trípticos, plantillas, tarjetas de presentación, diseño de empaques, videos, tutoriale, etc.</p>
+									<p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Material pop para puntos de venta y promoción.</p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#merca-acordeon" href="#merca-sitio" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Sitio web
+              </a>
+              <div id="merca-sitio" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Diseño del sitio web con base en el perfil de tu negocio y los requisitos técnicos para que sea un sitio con visitas.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Desarrollo de contenido textual y audiovisual.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Estrategias de posicionamiento orgánico y Adwords en Google.
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Atención y seguimiento del sitio web.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Conexión con redes sociales.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Formularios automatizados.</p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#merca-acordeon" href="#merca-redes" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Redes sociales
+              </a>
+              <div id="merca-redes" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Elegimos las más adecuadas de acuerdo al perfil de tu negocio.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Desarrollo de contenido para cada red social.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Atención, actualización y seguimiento de las redes sociales.</p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#merca-acordeon" href="#merca-ventas" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Ventas
+              </a>
+              <div id="merca-ventas" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Diagnóstico de la fuerza de ventas.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Herramientas para seguimiento a prospectos.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Técnicas de negociación.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Calidad en la atención al cliente.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Desarrollo del equipo de ventas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Mercadotecnia -->
+<div class="col-xs-12 modal fade modal-cyc" id="capital"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document"  >
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
+        <br><br>
+        <div class="row">
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Capital Humano -->
+<div class="col-xs-12 modal fade modal-cyc" id="capacitacion"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document"  >
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
+        <br><br>
+        <div class="row">
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Capacitación -->
+<div class="col-xs-12 modal fade modal-cyc" id="otros"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document"  >
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
+        <br><br>
+        <div class="row">
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>

@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-dark" [ngClass]="{ 'navbar-color': position == 0,'navbar-opaque': position > 0 }">
+  <a class="navbar-brand ml-3" href="#">
+    <img src="./assets/img/logosAndujo/blanco_png.png" height="50" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+    <div class="my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto text-center">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link pointer text-uppercase pr-3 pl-3" (click)="navigate('#slider',1000, -76)"  [ngClass]="{ 'active': position == 0 }">Inicio</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link pointer text-uppercase pr-3 pl-3" (click)="navigate('#about',1000, -76)" [ngClass]="{ 'active': position == 1 }">Acerca de</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link pointer text-uppercase pr-3 pl-3" (click)="navigate('#services',1000, -76)" [ngClass]="{ 'active': position == 2 }">Servicios</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link pointer text-uppercase pr-3 pl-3" (click)="navigate('#blog',1000, -76)" [ngClass]="{ 'active': position == 3 }">Blog</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link pointer text-uppercase pr-3 pl-3" (click)="navigate('#contact',1000, -76)" [ngClass]="{ 'active': position == 4 }">Contacto</a>
+        </li>
+        <li class="social-nav">
+          <div class="circulo-rs" id="fb">
+            <a target="_blank" href="https://www.facebook.com/CyCAndujo/" style="color:white;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </div>
+          <div class="circulo-rs" id="tw">
+            <a target="_blank" href="https://twitter.com/CyCAndujo" style="color:white;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
+          <div class="circulo-rs" id="go">
+            <a target="_blank" href="https://www.instagram.com/cycandujo/" style="color:white;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+          <div class="circulo-rs" id="in">
+            <a target="_blank" href="https://www.linkedin.com/company/25030333/" style="color:white;"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+          <div class="circulo-rs" id="ws">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=5216141929470&text=Hola%2C%20me%20gustaría%20recibir%20más%20información%20acerca%20de%20los%20servicios%20de%20CyC%20Andujo" style="color:white;"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section id="go-home" *ngIf="position != 0">
+  <a [scrollTo]="'#slider'" [scrollDuration]="1000" class="btn btn-info go-home pointer" ><i class="fa fa-chevron-up white" aria-hidden="true"></i></a>
+</section>

@@ -1,0 +1,22 @@
+<div *ngIf="!admin">
+  <app-general ></app-general>
+  <div class="footer d-flex row ">
+    <div class="col-xs-12 col-sm-4 text-center text-sm-left mt-1">
+      <small><a class="pointer" (click)="admin = true" >Panel de administración</a></small>
+    </div>
+    <div class="col-xs-12 col-sm-4 text-center mt-1">
+      <small>© Consultoría y Capacitación Andujo 2017</small>
+    </div>
+    <div class="col-xs-12 col-sm-4 text-center text-sm-right mt-1">
+      <small>Diseñado por  <a href="#">CyCAndujo</a></small>
+    </div>
+  </div>
+
+</div>
+<div *ngIf="admin">
+  <app-admin></app-admin>
+  <a class="pointer" (click)="admin = false" >Salir</a>
+</div>
+
+
+<!-- <router-outlet name="main"></router-outlet> -->
