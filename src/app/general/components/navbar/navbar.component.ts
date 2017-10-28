@@ -1,5 +1,6 @@
 import { Component,ElementRef,HostListener } from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
+import { Location } from '@angular/common';
+import {Router, ActivatedRoute   } from '@angular/router';
 import { ScrollToService } from 'ng2-scroll-to-el';
 
 @Component({
@@ -12,13 +13,24 @@ export class NavbarComponent{
     this.getposition();
   }
   position:number =0;
-
-  constructor(private router:Router, private scrollService: ScrollToService, private er: ElementRef) { }
   activeElement:string="#slider";
+  route:string;
+
+  constructor(private location: Location,private router:Router, private scrollService: ScrollToService, private er: ElementRef) {
+    router.events.subscribe((val) => {
+        this.route = location.path();
+    });
+  }
 
   navigate(element:string, duration:number, offset:number ){
-      this.scrollService.scrollTo(element, duration, offset);
-      this.getposition();
+      if (this.route == '/home') {
+        this.scrollService.scrollTo(element, duration, offset);
+        this.getposition();
+      }
+      else{
+        this.router.navigate(['home#about']);
+        //
+      }
   }
 
   getposition(){

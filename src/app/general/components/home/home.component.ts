@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BlogService} from '../../../services/blog.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ export class HomeComponent implements OnInit {
   aboutP:string;
   aboutActive:number;
 
-  constructor() {
+  constructor(private _bs:BlogService) {
     this.aboutShow(1);
   }
 

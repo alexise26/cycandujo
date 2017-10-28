@@ -6,10 +6,11 @@ import {APP_ROUTING} from './app.routes';
 import {GeneralModule} from './general/general.module';
 import {AdminModule} from './admin/admin.module';
 //Services
-//Pipes
+import {BlogService} from './services/blog.service';
 //Directives
 //Components
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { AppComponent } from './app.component';
   imports: [
   APP_ROUTING,ScrollToModule.forRoot(), BrowserModule,AdminModule, GeneralModule
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

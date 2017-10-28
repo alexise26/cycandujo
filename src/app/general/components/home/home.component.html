@@ -112,58 +112,7 @@
 </div>
 <!-- BLOG -->
 <section id="blog" class="text-center pt-5 pb-5">
-  <div class="container">
-    <h2 class="titles">Nuestro blog</h2>
-    <img src="./assets/img/short.png" alt="">
-    <div class="row">
-      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
-      <div class="col-xs-12 col-md-4 text-center">
-        <div class="grid">
-          <figure class="effect-oscar">
-            <img src="./assets/img/blog/post2.png" alt="img09"/>
-            <figcaption>
-              <h4>Facebook ADS y Marketing digital</h4>
-            </figcaption>
-          </figure>
-        </div>
-        <p class="text-justify text-18">
-          En el mes de agosto llevamos a cabo el curso presencial “Facebook ADS y Marketing digital”
-          dirigido a emprendedores y PyMES de la ciudad de Chihuahua.
-        </p>
-      </div>
-      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
-      <div class="col-xs-12 col-md-4 text-center">
-        <div class="grid">
-          <figure class="effect-oscar">
-            <img src="./assets/img/blog/post1.png" alt="img09"/>
-            <figcaption>
-              <h4>Facebook y contenido audiovisual</h4>
-            </figcaption>
-          </figure>
-        </div>
-        <p class="text-justify text-18">
-        El sábado 9 de septiembre estuvimos con las candidatas a Doctoras en Ciencias de la Salud y Medio Ambiente,
-        compartiendo el curso “Buenas prácticas de Facebook y contenido audiovisual”.
-        </p>
-      </div>
-      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
-      <div class="col-xs-12 col-md-4 text-center">
-        <div class="grid">
-          <figure class="effect-oscar">
-            <img src="./assets/img/blog/post3.png" alt="img09"/>
-            <figcaption>
-              <h4>Photoshop & <br> Illustrator</h4>
-            </figcaption>
-          </figure>
-        </div>
-        <p class="text-justify text-18">
-          Estamos próximos a iniciar el curso básico de “Photoshop & Illustrator”, donde
-          iniciaremos desde las bases, para quienes nunca han manejado estos programas.
-        </p>
-      </div>
-
-    </div>
-  </div>
+  <app-blog [posts]="_bs.posts.reverse() | slice:0:3"></app-blog>
 </section>
 <!-- CONTACT -->
 <div class="parallax-contact">

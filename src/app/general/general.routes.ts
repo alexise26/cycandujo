@@ -5,7 +5,8 @@ import {PostComponent} from './components/post/post.component';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'blog/:post', component: BlogComponent},
+  { path: 'blog', component: BlogComponent},
+  { path: 'post/:post', component: PostComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
