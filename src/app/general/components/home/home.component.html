@@ -10,6 +10,9 @@
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
       <div class="carousel-item active" style="background-image: url('./assets/img/car-1.jpg')">
+        <div class="text-center">
+          <img src="./assets/img/logosAndujo/blanco_png.png" alt="" class="img-responsive img-logo-car">
+        </div>
         <div class="carousel-caption">
           <h3>Consultoría empresarial</h3>
         </div>
@@ -77,7 +80,7 @@
     				  <i class="fa fa-line-chart fa-stack-1x"></i>
     				</span>
             <h4 class="white mb-3 mt-3">Mercadotecnia</h4>
-            <button class="btn btn-outline-light" data-toggle="modal" data-target="#mercadotecnia">Más</button>
+            <button class="btn btn-outline-light mt-0 mt-md-4 mt-lg-0" data-toggle="modal" data-target="#mercadotecnia">Más</button>
           </div>
           <div class="col-xs-12 col-md-3 text-center mt-3">
             <span class="fa-stack fa-lg">
@@ -93,7 +96,7 @@
 							  <i class="fa fa-mortar-board   fa-stack-1x"></i>
 							</span>
               <h4 class="white mb-3 mt-3">Capacitación</h4>
-              <button class="btn btn-outline-light" data-toggle="modal" data-target="#capacitacion">Más</button>
+              <button class="btn btn-outline-light mt-0 mt-md-4 mt-lg-0" data-toggle="modal" data-target="#capacitacion">Más</button>
           </div>
           <div class="col-xs-12 col-md-3 text-center mt-3">
               <span class="fa-stack fa-lg">
@@ -241,6 +244,7 @@
 <!-- Mercadotecnia -->
 <div class="col-xs-12 modal fade modal-cyc" id="mercadotecnia"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document"  >
+      <h3 class="white">Mercadotecnia</h3>
     <div class="row">
       <div class="text-justify" style="width:100% ;">
         <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
@@ -309,46 +313,131 @@
     </div>
   </div>
 </div>
-<!-- Mercadotecnia -->
+<!-- Capital humano -->
 <div class="col-xs-12 modal fade modal-cyc" id="capital"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document"  >
+      <h3 class="white">Capital Humano</h3>
     <div class="row">
-      <div class="col-xs-12 text-center">
+      <div class="text-justify" style="width:100%">
         <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
         <br><br>
-        <div class="row">
-
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Capital Humano -->
-<div class="col-xs-12 modal fade modal-cyc" id="capacitacion"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document"  >
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
-        <br><br>
-        <div class="row">
-
-
-
+        <div class="row ml-4 mr-4" >
+          <div id="capital-acordeon" data-children=".item">
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#capital-acordeon" href="#capital-estructura" aria-expanded="true" aria-controls="exampleAccordion1">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Estructura organizacional
+              </a>
+              <div id="capital-estructura" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Organigrama</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Análisis y descripción de puestos, basados en competencias profesionales.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Planeación estratégica: misión, visión, valores, objetivos, indicadores, comités.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Estandarización de procesos, manuales, instrucciones, referencias, formatos.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Sistemas personalizados para automatizar procedimientos internos.</p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#capital-acordeon" href="#capital-rec" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Reclutamiento y selección
+              </a>
+              <div id="capital-rec" class="collapse" role="tabpanel">
+                  <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Reclutamiento y selección.</p>
+									<p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Publicación de vacantes. </p>
+									<p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Entrevistas. </p>
+									<p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Aplicación de exámenes psicométricos y psicológicos. </p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#capital-acordeon" href="#capital-desarrollo" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Desarollo organizacional
+              </a>
+              <div id="capital-desarrollo" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Diagnóstico situacional. d</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Relaciones intrapersonales e interpersonales. d</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Comportamiento de competencias profesionales: liderazgo, comunicación, trabajo en equipo, solución de problemas. d</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Medición del clima laboral: paneles, encuestas, entrevistas, observación, mystery shopper. d</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Establecimiento de KPI´s. d</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Sensibilización de los niveles estratégicos (directivos y gerenciales), tácticos (supervisores, coordinadores) y operativos. d</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Planeación de vida y carrera. d</p>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 </div>
 <!-- Capacitación -->
-<div class="col-xs-12 modal fade modal-cyc" id="otros"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="col-xs-12 modal fade modal-cyc" id="capacitacion"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document"  >
+    <h3 class="white">Capacitación</h3>
     <div class="row">
-      <div class="col-xs-12 text-center">
+      <div class="text-justify" style="width:100%">
         <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
         <br><br>
-        <div class="row">
+        <div class="row ml-4 mr-4" >
 
+          <div id="capacitacion-acordeon" data-children=".item">
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#capacitacion-acordeon" href="#capacitacion-merca" aria-expanded="true" aria-controls="exampleAccordion1">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Mercadotecnia
+              </a>
+              <div id="capacitacion-merca" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Marketing digital.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Social media.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Sitios web y landing page.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Metodología de prospección y ventas efectivas.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Atención al cliente.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Diseño gráfico.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Incubación y acelerador de negocios.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Neuromarketing y Neurocomunicación.</p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#capacitacion-acordeon" href="#capacitacion-des" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Desarrollo organizacional
+              </a>
+              <div id="capacitacion-des" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Calidad y productividad.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Trabajo en equipo, comunicación, liderazgo y solución de problemas.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Inteligencia emocional.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Administración del tiempo.</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Diseño de cursos de capacitación</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Evaluación del desempeño</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Análisis y descripción de puestos</p>
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> PNL</p>
+              </div>
+            </div>
+            <div class="item">
+              <a class="gray" data-toggle="collapse" data-parent="#capacitacion-acordeon" href="#capacitacion-otros" aria-expanded="false" aria-controls="exampleAccordion2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i> Otros
+              </a>
+              <div id="capacitacion-otros" class="collapse" role="tabpanel">
+                <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Finanzas.</p>
+								<p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Contabilidad.</p>
+								<p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Aspectos fiscales y legales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+<!-- otros -->
+<div class="col-xs-12 modal fade modal-cyc" id="otros"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document"  >
+      <h3 class="white">Otros servicios</h3>
+    <div class="row">
+      <div class="text-justify" style="width:100%">
+        <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">×</button>
+        <br><br>
+        <div class="row ml-4 mr-4" >
+          <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Asesoría y desarrollo de planes de negocio: Mercadotecnia, Recursos Humanos, Producción, Finanzas y Aspectos Legales. </p>
+          <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Planeación estratégica integral. </p>
+          <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Asesoría legal en contratos, contrataciones, desvinculación de empleados, demandas laborales. </p>
+          <p class="mb-3"><i class="fa fa-check-circle ml-3" aria-hidden="true"></i> Servicio de imprenta: catálogos, brochures, trípticos, tarjetas de presentación, anuncios luminosos, rotulación, lonas.</p>
+        </div>
       </div>
     </div>
   </div>

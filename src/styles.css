@@ -228,6 +228,11 @@ body.modal-open #wrap{
   display:block;
   color: white;
 }
+.img-logo-car{
+  width:100%;
+  max-width:500px;
+  margin-top:19%;
+}
 @media (max-width: 768px) {
 
 	.parallax-services{
@@ -238,6 +243,11 @@ body.modal-open #wrap{
 
 	.parallax-contact{
     height: 700px;
+  }
+  .img-logo-car{
+    width:100%;
+    max-width:350px;
+    margin-top:35%;
   }
 }
 
