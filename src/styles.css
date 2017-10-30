@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Lato');
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body{
   font-family: 'Lato', sans-serif;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 .pt-50{
   padding-top:50px;
@@ -95,6 +108,9 @@ body{
 }
 .gray:hover{
   color:white;
+}
+.pb-500{
+  padding-bottom: 40%;
 }
 #about{
   background-image: url('./assets/img/about.jpg');
@@ -199,6 +215,12 @@ body{
   opacity: 1;
 }
 .footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
   width: 101%;
   color:white;
   height: 85px;

@@ -5,10 +5,12 @@
   <ng-template #search>
     <div class="pt-50">
       <h2 class="titles pb-2 pt-3">CyC Andujo Blog</h2>
-      <div class="inner-addon left-addon mb-4">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <input type="text" class="form-control" placeholder="Buscar..."/>
-      </div>
+      <form (ngSubmit)=filterResults(searchField.value)>
+        <div class="inner-addon left-addon mb-4">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" class="form-control" placeholder="Buscar..." #searchField/>
+        </div>
+      </form>
     </div>
   </ng-template>
   <ng-template #three>
@@ -18,21 +20,32 @@
     </div>
   </ng-template>
 
+  <div class="row" *ngIf="loading" >
+    <div class="alert alert-primary" role="alert" style="width:100%;">
+      {{msg}}
+    </div>
+  </div>
+  <div class="row" *ngIf="!results">
+    <div class="alert alert-danger" role="alert" style="width:100%;">
+      {{msg}}
+    </div>
+  </div>
+  <div *ngIf="list">
+    <div class="row" *ngIf="list.length > 0 && !loading " >
+      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
+      <div class="col-xs-12 col-md-4 text-center" *ngFor="let post of list">
+        <div class="grid" [routerLink]="['/post',post.key$]">
+          <figure class="effect-oscar">
 
-  <div class="row">
-    <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
-    <div class="col-xs-12 col-md-4 text-center" *ngFor="let post of posts">
-      <div class="grid" [routerLink]="['/post',post.key$]">
-        <figure class="effect-oscar">
-
-            <img src="./assets/img/blog/{{post.key$}}.png"/>
-          <figcaption>
-            <h4>{{post.title}}</h4>
-          </figcaption>
-        </figure>
+              <img src="./assets/img/blog/{{post.key$}}.png"/>
+            <figcaption>
+              <h4>{{post.title | uppercase}}</h4>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="text-justify text-18" [innerHTML]="post.text | preview">
+        </p>
       </div>
-      <p class="text-justify text-18" [innerHTML]="post.text | preview">
-      </p>
     </div>
   </div>
 </div>

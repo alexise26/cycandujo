@@ -1,6 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
 import { GeneralComponent } from './general/general.component';
-import { BlogComponent } from './general/components/blog/blog.component';
 // import { PostComponent } from './general/components/post/post.component';
 import { AdminComponent } from './admin/admin.component';
 
