@@ -1,6 +1,24 @@
-<div class="container">
-  <h2 class="titles">Nuestro blog</h2>
-  <img src="./assets/img/short.png" alt="">
+<div class="container text-center pt-5 pb-5">
+
+  <div *ngIf="this._bs.route == '/blog';then search else three"></div>
+
+  <ng-template #search>
+    <div class="pt-50">
+      <h2 class="titles pb-2 pt-3">CyC Andujo Blog</h2>
+      <div class="inner-addon left-addon mb-4">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" class="form-control" placeholder="Buscar..."/>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #three>
+    <div>
+      <h2 class="titles" >Nuestro blog</h2>
+      <img src="./assets/img/short.png" alt="">
+    </div>
+  </ng-template>
+
+
   <div class="row">
     <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
     <div class="col-xs-12 col-md-4 text-center" *ngFor="let post of posts">

@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Location } from '@angular/common';
+import {Router   } from '@angular/router';
 import {Post} from '../interfaces/post';
 
 @Injectable()
 export class BlogService {
+  public route:string;
   public posts:Post[]=[{
     date: new Date('27-09-2017'),
     title: 'facebook ads y marketing digital',
@@ -23,6 +26,10 @@ export class BlogService {
   }
   ]
 
-  constructor() { }
+  constructor(private location: Location,private router:Router) {
+    router.events.subscribe((val) => {
+        this.route = location.path();
+    });
+  }
 
 }
