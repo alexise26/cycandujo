@@ -1,16 +1,18 @@
 <div class="container text-center pt-5 pb-5">
 
-  <div *ngIf="this._bs.route == '/blog';then search else three"></div>
+  <div *ngIf="isHome;then three else search"></div>
 
   <ng-template #search>
-    <div class="pt-50">
+    <div class="pt-50" *ngIf="!isPost">
       <h2 class="titles pb-2 pt-3">CyC Andujo Blog</h2>
-      <form (ngSubmit)=filterResults(searchField.value)>
         <div class="inner-addon left-addon mb-4">
           <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" class="form-control" placeholder="Buscar..." #searchField/>
+          <input type="text" class="form-control" placeholder="Buscar..."[(ngModel)]="searchField"/>
         </div>
-      </form>
+    </div>
+    <div *ngIf="isPost">
+        <h6 class="titles">Recientes</h6>
+        <hr>
     </div>
   </ng-template>
   <ng-template #three>
@@ -20,23 +22,16 @@
     </div>
   </ng-template>
 
-  <div class="row" *ngIf="loading" >
+  <div class="row" *ngIf="loading && !isPost" >
     <div class="alert alert-primary" role="alert" style="width:100%;">
-      {{msg}}
+      Cargando...
     </div>
   </div>
-  <div class="row" *ngIf="!results">
-    <div class="alert alert-danger" role="alert" style="width:100%;">
-      {{msg}}
-    </div>
-  </div>
-  <div *ngIf="list">
-    <div class="row" *ngIf="list.length > 0 && !loading " >
-      <!-- <img src="./assets/img/blog/post2.png" alt="Avatar" class="image"> -->
-      <div class="col-xs-12 col-md-4 text-center" *ngFor="let post of list">
+  <div *ngIf="posts">
+    <div class="row" *ngIf="posts.length > 0 && !loading " >
+      <div [ngClass]="{ 'col-md-4': isPost == false}"  class="col-xs-12 col-md-4 text-center" *ngFor="let post of posts | filter: searchField as result">
         <div class="grid" [routerLink]="['/post',post.key$]">
           <figure class="effect-oscar">
-
               <img src="./assets/img/blog/{{post.key$}}.png"/>
             <figcaption>
               <h4>{{post.title | uppercase}}</h4>

@@ -278,6 +278,13 @@ body.modal-open #wrap{
 /* add padding  */
 .left-addon input  { padding-left:  30px; }
 .right-addon input { padding-right: 30px; }
+
+.btn-linkedin{
+  background-color:#0b6087;
+  border:#0b6090;
+}
+
+
 @media (max-width: 768px) {
 
 	.parallax-services{

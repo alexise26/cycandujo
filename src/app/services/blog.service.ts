@@ -22,7 +22,7 @@ export class BlogService {
     date: new Date('10-06-2017'),
     title: 'photoshop & illustrator',
     text:'estamos próximos a iniciar el curso básico de <b>“photoshop & illustrator”<b>, donde iniciaremos desde las bases, para quienes nunca han manejado estos programas. el objetivo del curso es realizar tareas de: fotografía, fotomontajes, edición y crear diseños desde cero, con sus respectivas técnicas. todavía quedan algunos lugares, contáctanos para que seas parte de este curso de 20 horas, serán cuatro sábados de aprendizaje intenso. ',
-    key$:'photoshop-&-illustrator'
+    key$:'photoshop-illustrator'
   }
   ]
 

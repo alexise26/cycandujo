@@ -1,3 +1,57 @@
-<p style="height:300px;">
-  post works!
-</p>
+<div class="container text-center pb-5" style="padding-top:100px;">
+  <div class="row text-justify">
+    <div class="col-xs-12 col-md-8 pt-5">
+      <h3 class="titles">Titulo del post</h3>
+      <img src="./assets/img/blog/facebook-ads.png" class="img-fluid" alt="">
+      <small><i class="fa fa-calendar" aria-hidden="true"></i> 7 septiembre 2017</small>
+      <small><i class="fa fa-user" aria-hidden="true"></i> Posted by <a>CyC Andujo</a></small>
+      <p class="pt-3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus natus dolorem sapiente error eaque. Perferendis nisi possimus optio cumque, voluptatibus temporibus sapiente, ex molestias architecto reprehenderit earum eum modi dicta.
+      </p>
+      <p class="pt-3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus natus dolorem sapiente error eaque. Perferendis nisi possimus optio cumque, voluptatibus temporibus sapiente, ex molestias architecto reprehenderit earum eum modi dicta.
+      </p>
+
+      <div class="mysharing">
+					<!-- Twitter -->
+					<a href="https://twitter.com/share?url=https://cycandujo.com/post1.html" title="Share on Twitter" target="_blank" class="btn btn-info btn-sm"><i class="fa fa-twitter"></i> Twitter</a>
+					 <!-- Facebook -->
+					<a href="http://www.facebook.com/sharer.php?u=https://cycandujo.com/post1.html" title="Share on Facebook" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-facebook"></i> Facebook</a>
+					<!-- Google+ -->
+					<a href="https://plus.google.com/share?url=https://cycandujo.com/post1.html" title="Share on Google+" target="_blank" class="btn btn-danger btn-sm"><i class="fa fa-google-plus"></i> Google+</a>
+					<!-- LinkedIn -->
+					<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=cycandujo.com/post1.html" title="Share on LinkedIn" target="_blank" class="btn btn-info btn-linkedin btn-sm"><i class="fa fa-linkedin"></i> LinkedIn</a>
+			</div>
+    </div>
+
+    <div class="col-xs-12 col-md-4">
+        <app-blog></app-blog>
+    </div>
+  </div>
+  <div class="row">
+    <div class="comments1">
+			<div id="disqus_thread"></div>
+  			<script>
+
+  			/**
+  			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  			/*
+  			var disqus_config = function () {
+  			this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  			};
+  			*/
+  			(function() { // DON'T EDIT BELOW THIS LINE
+  			var d = document, s = d.createElement('script');
+  			s.src = 'https://cycandujo.disqus.com/embed.js';
+  			s.setAttribute('data-timestamp', +new Date());
+  			(d.head || d.body).appendChild(s);
+  			})();
+  			</script>
+  			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+  </div>
+</div>
+<script id="dsq-count-scr" src="//cycandujo.disqus.com/count.js" async></script>

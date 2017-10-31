@@ -7,6 +7,8 @@ import {APP_ROUTING_GENERAL} from './general.routes';
 import {BlogService} from '../services/blog.service';
 //Pipes
 import { PreviewPipe } from '../pipes/preview.pipe';
+import { FilterPipe } from '../pipes/filter.pipe';
+
 //components
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,6 +23,6 @@ import { GeneralComponent } from './general.component';
       ],
   exports: [ GeneralComponent,BlogComponent, PostComponent ],
   providers: [BlogService],
-  declarations: [PreviewPipe, NavbarComponent, HomeComponent, BlogComponent, PostComponent, PostsComponent, GeneralComponent]
+  declarations: [PreviewPipe,FilterPipe, NavbarComponent, HomeComponent, BlogComponent, PostComponent, PostsComponent, GeneralComponent]
 })
 export class GeneralModule { }

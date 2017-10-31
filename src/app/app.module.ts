@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
   APP_ROUTING,ScrollToModule.forRoot(), BrowserModule,AdminModule, GeneralModule
