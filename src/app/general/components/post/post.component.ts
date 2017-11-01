@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {BlogService} from '../../../services/blog.service';
+import {Post} from '../../../interfaces/post';
+
 
 
 @Component({
@@ -10,18 +12,18 @@ import {BlogService} from '../../../services/blog.service';
 })
 export class PostComponent implements OnInit {
   id:string;
+  post:Post;
 
-  constructor(private _bs:BlogService, private router:Router, private route:ActivatedRoute) { }
+  constructor(private _bs:BlogService, private router:Router, private route:ActivatedRoute) {
+    scroll(0,0);
+    this.route.params.subscribe(parametros=>{
+        this.id= parametros['post'];
+        this.post = this._bs.getPost(this.id)
+      });
+  }
 
   ngOnInit() {
-    this.route.params.subscribe(parametros=>{
-          //console.log(parametros);
-        this.id= parametros['id'];//Obtenemos el id del héroe
-        if (this.id !== 'nuevo') { //Si es distinto a nuevo
-            //this._bs.getHeroe(this.id)
-            //  .subscribe(heroe=> this.heroe = heroe)
-        }
-      });
+
   }
 
 }

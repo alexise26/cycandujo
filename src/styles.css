@@ -214,12 +214,17 @@ body{
 .go-home:hover{
   opacity: 1;
 }
+.visita{
+  color:gray;
+}
+.visita:hover{
+  color:black;
+}
 .footer{
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
 
   width: 101%;
   color:white;
@@ -283,7 +288,10 @@ body.modal-open #wrap{
   background-color:#0b6087;
   border:#0b6090;
 }
-
+.text-post{
+  font-size: 19px;
+  color:#000;
+}
 
 @media (max-width: 768px) {
 

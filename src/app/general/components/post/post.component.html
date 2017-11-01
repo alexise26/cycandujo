@@ -1,26 +1,21 @@
 <div class="container text-center pb-5" style="padding-top:100px;">
   <div class="row text-justify">
     <div class="col-xs-12 col-md-8 pt-5">
-      <h3 class="titles">Titulo del post</h3>
-      <img src="./assets/img/blog/facebook-ads.png" class="img-fluid" alt="">
-      <small><i class="fa fa-calendar" aria-hidden="true"></i> 7 septiembre 2017</small>
-      <small><i class="fa fa-user" aria-hidden="true"></i> Posted by <a>CyC Andujo</a></small>
-      <p class="pt-3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus natus dolorem sapiente error eaque. Perferendis nisi possimus optio cumque, voluptatibus temporibus sapiente, ex molestias architecto reprehenderit earum eum modi dicta.
-      </p>
-      <p class="pt-3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus natus dolorem sapiente error eaque. Perferendis nisi possimus optio cumque, voluptatibus temporibus sapiente, ex molestias architecto reprehenderit earum eum modi dicta.
-      </p>
+      <h3 class="titles">{{post.title | uppercase}}</h3>
+      <img src="./assets/img/blog/{{post.key$}}.png" class="img-fluid" alt="">
+      <small><i class="fa fa-calendar" aria-hidden="true"></i> {{post.date | date:'dd-MMMM-yyyy'}}</small>
+      <small><i class="fa fa-user" aria-hidden="true"></i> Posted by <a class="gray pointer">{{post.postedBy}}</a></small>
+      <p class="text-post pt-3" [innerHTML]="post.text | text">
 
       <div class="mysharing">
 					<!-- Twitter -->
-					<a href="https://twitter.com/share?url=https://cycandujo.com/post1.html" title="Share on Twitter" target="_blank" class="btn btn-info btn-sm"><i class="fa fa-twitter"></i> Twitter</a>
+					<a href="https://twitter.com/share?url=https://cycandujo.com/post/{{id}}" title="Share on Twitter" target="_blank" class="btn btn-info btn-sm"><i class="fa fa-twitter"></i> Twitter</a>
 					 <!-- Facebook -->
-					<a href="http://www.facebook.com/sharer.php?u=https://cycandujo.com/post1.html" title="Share on Facebook" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-facebook"></i> Facebook</a>
+					<a href="http://www.facebook.com/sharer.php?u=https://cycandujo.com/post/{{id}}" title="Share on Facebook" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-facebook"></i> Facebook</a>
 					<!-- Google+ -->
-					<a href="https://plus.google.com/share?url=https://cycandujo.com/post1.html" title="Share on Google+" target="_blank" class="btn btn-danger btn-sm"><i class="fa fa-google-plus"></i> Google+</a>
+					<a href="https://plus.google.com/share?url=https://cycandujo.com/post/{{id}}" title="Share on Google+" target="_blank" class="btn btn-danger btn-sm"><i class="fa fa-google-plus"></i> Google+</a>
 					<!-- LinkedIn -->
-					<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=cycandujo.com/post1.html" title="Share on LinkedIn" target="_blank" class="btn btn-info btn-linkedin btn-sm"><i class="fa fa-linkedin"></i> LinkedIn</a>
+					<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=cycandujo.com/post/{{id}}" title="Share on LinkedIn" target="_blank" class="btn btn-info btn-linkedin btn-sm"><i class="fa fa-linkedin"></i> LinkedIn</a>
 			</div>
     </div>
 

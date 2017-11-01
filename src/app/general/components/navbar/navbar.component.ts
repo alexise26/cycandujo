@@ -17,7 +17,7 @@ export class NavbarComponent{
   activeElement:string="#slider";
 
   constructor(private _bs:BlogService,private router:Router, private scrollService: ScrollToService, private er: ElementRef) {
-
+    
   }
 
   navigate(element:string, duration:number, offset:number ){
@@ -26,7 +26,7 @@ export class NavbarComponent{
         this.getposition();
       }
       else{
-        this.router.navigate(['home#about']);
+        this.router.navigate(['home']);
         //
       }
   }
