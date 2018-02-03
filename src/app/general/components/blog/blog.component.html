@@ -28,7 +28,7 @@
     </div>
   </div>
   <div *ngIf="posts">
-    <div class="row" *ngIf="posts.length > 0 && !loading " >
+    <div class="row" *ngIf="!loading " >
       <div [ngClass]="{ 'col-md-4': isPost == false}"  class="col-xs-12 col-md-4 text-center" *ngFor="let post of posts | filter: searchField as result">
         <div class="grid" (click)="navigate(post.key$)">
           <figure class="effect-oscar">

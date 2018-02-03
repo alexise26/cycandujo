@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule  } from '@angular/core';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import {APP_ROUTING} from './app.routes';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 //Modules
 import {GeneralModule} from './general/general.module';
 import {AdminModule} from './admin/admin.module';
@@ -19,7 +20,7 @@ import { AppComponent } from './app.component';
   imports: [
   APP_ROUTING,ScrollToModule.forRoot(), BrowserModule,AdminModule, GeneralModule
   ],
-  providers: [BlogService],
+  providers: [BlogService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

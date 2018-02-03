@@ -9,18 +9,20 @@ import {BlogComponent} from '../blog/blog.component';
   templateUrl: './home.component.html',
   styles: []
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements  OnInit {
   aboutTitle:string;
   aboutP:string;
   aboutActive:number;
+  loading:boolean=true;
 
   constructor(private _bs:BlogService) {
     this.aboutShow(1);
   }
-
-  ngOnInit() {
+  ngOnInit(){
+    setTimeout(()=>{
+      this.loading=false;
+    },2500);
   }
-
   aboutShow(about:number){
     this.aboutActive=about;
     switch(about) {

@@ -21,7 +21,6 @@ export class BlogComponent implements OnInit {
 
   constructor(private _bs:BlogService,private router:Router) {
 
-
     setTimeout(()=>{
       if (this._bs.route == '/home') {
             this.isHome=true;
@@ -35,21 +34,19 @@ export class BlogComponent implements OnInit {
     },100);
 
     setTimeout(()=>{
-      this.loadPosts();
+      this.posts= this._bs.posts.reverse();
+        if (!this.isBlog) {
+          this.posts = this.posts.slice(0,3);
+        }
       this.loading= false;
     },1000);
+
 
    }
 
   ngOnInit() {
   }
 
-  loadPosts(){
-    this.posts= this._bs.posts;
-      if (!this.isBlog) {
-        this.posts = this.posts.slice(0,3).reverse();
-      }
-  }
 
   navigate(key$:string){
     scroll(0,0);
